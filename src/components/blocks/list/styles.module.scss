@@ -1,0 +1,33 @@
+.block-list {
+    padding: 15px;
+    margin: 0;
+    width: 200px;
+    flex-shrink: 0;
+    overflow-y: scroll;
+    flex-grow: 1;
+
+    ::-webkit-scrollbar-track {
+        background: orange;
+    }
+
+    &__item {
+
+        width: 100%;
+        color: var(--f-text-color);
+
+        & + & {
+            margin-top: 10px;
+        }
+
+        &-icon {
+        }
+    }
+
+    &__no-items {
+        list-style: none;
+        font-style: italic;
+        color: rgba(255, 255, 255, 0.62);
+        font-weight: 300;
+        font-size: 14px;
+    }
+}

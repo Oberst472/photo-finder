@@ -1,3 +1,23 @@
+:root {
+    --f-aside-gray: #231e21;
+    --f-bg-color: #323334;
+    --f-separator-color: #302a2b;
+    --f-scroll-color: #6e6869;
+    --f-text-color: #ffffff;
+}
+
 body {
     background-color: #5f5f5f;
+    margin: 0;
+    padding: 0;
+
+}
+
+.dev-center {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+
 }

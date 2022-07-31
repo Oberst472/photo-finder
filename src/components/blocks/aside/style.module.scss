@@ -1,0 +1,16 @@
+.block-aside {
+    padding: 15px;
+    margin: 0;
+
+    &__item {
+        width: 100%;
+        color: var(--f-text-color);
+
+        & + & {
+            margin-top: 10px;
+        }
+
+        &-icon {
+        }
+    }
+}
