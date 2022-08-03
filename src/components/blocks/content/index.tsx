@@ -21,7 +21,7 @@ const BlockContent = ({className, items, chooseItem, img}: PropsTypes) => {
                     items={item.children}
                     chooseItem={chooseItem}
                     index={index}
-                    key={item.id}
+                    key={item.id.toString()}
                 />
             )}
 

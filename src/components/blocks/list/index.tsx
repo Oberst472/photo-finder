@@ -6,14 +6,15 @@ import UiElement from '../../ui/element';
 type PropsTypes = {
     items: Item[],
     chooseItem: Function,
-    list: number,
-    index: number
+    index: number,
+    key: string
 }
 
-const BlockList = ({items, chooseItem, index}: PropsTypes) => {
+const BlockList = ({items, chooseItem, index, key}: PropsTypes) => {
     return (
         <ul className={styles['block-list']}>
             {!items.length && <li className={styles['block-list__no-items']}>This folder is empty</li>}
+
             {items.map((item: Item) =>
                 <UiElement
                     tag={'li'}
