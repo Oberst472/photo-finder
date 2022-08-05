@@ -1,0 +1,113 @@
+.ui-upload-file {
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    position: absolute;
+    background-color: var(--f-bg-color);
+    color: var(--f-text-color) & __box {
+    }
+
+    &__area {
+        border: 2px dotted var(--f-border-color);
+        min-height: 240px;
+        display: flex;
+        border-radius: 10px;
+        align-items: center;
+        justify-content: center;
+        color: var(--f-text-light-color);
+        cursor: pointer;
+        transition-duration: 0.3s;
+        &:hover {
+            background-color: rgba(39, 255, 6, 0.2);
+            border-color: #27FF06;
+        }
+
+        &--active {
+            background-color: rgba(39, 255, 6, 0.2);
+            border-color: #27FF06;
+        }
+    }
+
+    &__items {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+    }
+
+    &__item {
+        position: relative;
+        &:hover {
+            .ui-upload-file__btns {
+                opacity: 1;
+                pointer-events: auto;
+            }
+        }
+    }
+
+    &__img-box {
+        width: 100%;
+        height: 0;
+        position: relative;
+        padding-top: 54%;
+        border-radius: 4px;
+        overflow: hidden;
+    }
+
+    &__preview {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__btns {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        gap: 5px;
+        opacity: 0;
+        pointer-events: none;
+        transition-duration: 0.3s;
+    }
+
+    &__btn {
+        flex-shrink: 0;
+        width: 32px;
+        height: 32px;
+        background-color: #fff;
+        padding: 6px;
+        border-radius: 50%;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--f-text-light-color);
+        border: none;
+        cursor: pointer;
+
+        & > * {
+            transform: scale(0.7);
+        }
+
+        &:hover {
+            opacity: 0.8;
+        }
+        &:active {
+            opacity: 0.6;
+        }
+
+        &--update {
+        }
+
+        &--delete {
+        }
+    }
+    &__save-btn {
+        width: 100%;
+        margin: 15px 0;
+    }
+}

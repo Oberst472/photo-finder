@@ -10,8 +10,10 @@ import { Item } from '../../../types';
 const SectionFinder = () => {
     const [items, setItems] = useState([] as Item[])
     const [activeImg, setActiveImg] = useState('')
+    const [isDownloadActive, setDownloadActive] = useState(false)
     const chooseItem = function (item: Item, id: string, index: number) {
         setActiveImg('')
+        if (isDownloadActive) setDownloadActive(false)
 
         if (item.type === 'img') {
             const arr = [...items]
@@ -36,6 +38,7 @@ const SectionFinder = () => {
         <section className={styles['section-finder']}>
 
             <BlockControl
+                setDownloadActive={setDownloadActive}
                 className={styles['section-finder__control']}
             />
             <BlockAside
@@ -45,6 +48,8 @@ const SectionFinder = () => {
             />
             <BlockContent
                 className={styles['section-finder__content']}
+                isDownloadActive={isDownloadActive}
+                setDownloadActive={setDownloadActive}
                 items={items}
                 chooseItem={chooseItem}
                 img={activeImg}

@@ -6,12 +6,7 @@
     overflow-y: scroll;
     flex-grow: 1;
 
-    ::-webkit-scrollbar-track {
-        background: orange;
-    }
-
     &__item {
-
         width: 100%;
         color: var(--f-text-color);
 
@@ -26,7 +21,7 @@
     &__no-items {
         list-style: none;
         font-style: italic;
-        color: rgba(255, 255, 255, 0.62);
+        color: var(--f-text-color);
         font-weight: 300;
         font-size: 14px;
     }

@@ -3,6 +3,7 @@
     display: flex;
     align-items: center;
     padding: 15px;
+    background-color: var(--f-header-color);
     color: rgba(255, 255, 255, 0.5);
 
     & > * {
@@ -10,7 +11,7 @@
         cursor: pointer;
         border: none;
         border-radius: 3px;
-        color: white;
+        color: var(--f-text-light-color);
         background-color: rgba(255, 255, 255, 0.23);
 
         &:active {

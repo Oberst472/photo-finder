@@ -1,0 +1,38 @@
+.ui-btn {
+    padding: 1em 1.5em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    &:hover {
+        opacity: 0.8;
+    }
+    &:active {
+        opacity: 0.6;
+    }
+
+    &--size {
+        &-small {
+            font-size: 8px;
+        }
+
+        &-default {
+            font-size: 10px;
+        }
+
+        &-large {
+            font-size: 12px;
+        }
+    }
+
+    &--theme {
+        &-default {
+            background-color: var(--f-active-color);
+            color: #ffffff;
+        }
+
+    }
+
+    &__text {
+        font-size: 1.4em;
+    }
+}

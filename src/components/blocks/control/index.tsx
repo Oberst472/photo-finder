@@ -2,15 +2,23 @@ import React from 'react';
 import styles from './styles.module.scss'
 import clsx from 'clsx';
 
+import UiBtn from '../../ui/btn'
+
 type PropsTypes = {
-    className: string
+    className: string,
+    setDownloadActive: Function
 }
 
-const BlockControl = ({className}: PropsTypes) => {
+const BlockControl = ({className, setDownloadActive}: PropsTypes) => {
+    const openUpload = function () {
+        setDownloadActive(true)
+    }
+    const addFolder = function () {
+    }
     return (
         <div className={clsx(styles['block-control'], className)}>
-            <button>add image</button>
-            <button>add folder</button>
+            <UiBtn className={styles['block-control__btn']} onClick={openUpload} size={'small'}>add image</UiBtn>
+            <UiBtn className={styles['block-control__btn']} onClick={addFolder} size={'small'}>add folder</UiBtn>
         </div>
     );
 };

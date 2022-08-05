@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './styles.module.scss'
 import { Item } from '../../../types';
 import UiElement from '../../ui/element';
+import clsx from 'clsx';
 
 type PropsTypes = {
     items: Item[],
@@ -21,6 +22,7 @@ const BlockList = ({items, chooseItem, index, key}: PropsTypes) => {
                     key={item.name}
                     iconFolder={item.type === 'folder'}
                     isActive={false}
+                    type={item.type === 'folder' ? 'folder' : 'file'}
                     className={styles['block-list__item']}
                     onClick={() => chooseItem(item, item.id, index)}
                 >

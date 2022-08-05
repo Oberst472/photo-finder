@@ -5,15 +5,20 @@ import { Item } from '../../../types';
 
 import BlockList from '../list';
 import BlockPreview from '../preview';
+import UiUploadFile from '../../ui/upload-file';
 
 type PropsTypes = {
     className: string,
     items: Item[],
     chooseItem: Function,
-    img: string
+    img: string,
+    isDownloadActive: boolean,
+    setDownloadActive: Function
+
+
 }
 
-const BlockContent = ({className, items, chooseItem, img}: PropsTypes) => {
+const BlockContent = ({className, items, chooseItem, img, isDownloadActive, setDownloadActive}: PropsTypes) => {
     return (
         <div className={clsx(styles['block-content'], className)}>
             {items.map((item, index) =>
@@ -31,6 +36,13 @@ const BlockContent = ({className, items, chooseItem, img}: PropsTypes) => {
                     className={styles['block-content__preview']}
                 />
             }
+            {isDownloadActive &&
+                <UiUploadFile
+                setDownloadActive={setDownloadActive}
+                className={styles['block-content__upload']}
+                >
+                    Drag and drop or upload files
+                </UiUploadFile>}
         </div>
     );
 };

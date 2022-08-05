@@ -1,9 +1,17 @@
 :root {
-    --f-aside-gray: #231e21;
-    --f-bg-color: #323334;
-    --f-separator-color: #302a2b;
-    --f-scroll-color: #6e6869;
-    --f-text-color: #ffffff;
+    --f-aside-color: #dedae0;
+    --f-header-color: #f4f0f6;
+    --f-bg-color: #fffdff;
+    --f-separator-color: #f4f0f6;
+    --f-scroll-color: #b5b2b6;
+    --f-text-color: #262427;
+    --f-text-light-color: rgba(38, 36, 39, 0.6);
+    --f-active-color: #0155dc;
+    --f-active-folder-color: #d6d6d6;
+    --f-active-text-color: #fffdff;
+    --f-icon-color: #337fdd;
+    --f-border-color: rgba(0, 0, 0, 0.1);
+    --f-success-color: rgba(39, 255, 6, 0.1);
 }
 
 body {

@@ -9,10 +9,11 @@ type PropsTypes = {
     iconFolder?: any,
     className: string,
     isActive?: boolean,
+    type?: string,
     onClick: Function
 }
 
-const UiElement = ({tag, children, className, iconFolder, isActive, onClick}: PropsTypes) => {
+const UiElement = ({tag, children, className, iconFolder, isActive, onClick, type}: PropsTypes) => {
     const [Tag, setTag] = useState('span')
     useEffect(() => {
         if (!tag) return
@@ -20,11 +21,11 @@ const UiElement = ({tag, children, className, iconFolder, isActive, onClick}: Pr
     }, [])
     return (
         //@ts-ignore
-        <Tag className={clsx([
+        <Tag className={clsx(
                 styles['ui-element'],
-                className
-            ],
-            {[styles['ui-element--active']]: isActive}
+                styles[`ui-element--${type}`],
+                {[styles['ui-element--active']]: isActive},
+                className,
         )} onClick={onClick}>
             {iconFolder && <IconFolder className={styles['ui-element__icon']}/>}
             <span className={styles['ui-element__text']}>{children}</span>

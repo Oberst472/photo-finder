@@ -4,7 +4,7 @@
     height: 600px;
     background-color: var(--f-bg-color);
     border-radius: 10px;
-    border: 1px solid #707070;
+    border: 1px solid var(--f-border-color);
     overflow-y: hidden;
     display: grid;
     grid-template-columns: [aside] 200px [content] 1fr;
@@ -16,19 +16,19 @@
         grid-column: control;
         grid-area: control;
         background-color: var(--f-aside-color);
-        border-bottom: 1px solid #707070;
+        border-bottom: 1px solid var(--f-border-color);
 
     }
     &__aside {
         grid-column: aside;
         grid-area: aside;
-        border-right: 1px solid #707070;
+        border-right: 1px solid var(--f-border-color);
 
     }
     &__content {
         grid-column: content;
         grid-area: content;
-        background-color: rgba(164, 165, 255, 0.18);
+        background-color: var(--f-bg-color);
     }
 
     & * {
@@ -36,15 +36,15 @@
         top: 0;
         box-sizing: border-box;
         &::-webkit-scrollbar-track {
-            background: var(--f-scroll-color);
+            background: var(--f-separator-color);
         }
         &::-webkit-scrollbar {
             width: 12px;               /* width of the entire scrollbar */
         }
         &::-webkit-scrollbar-thumb {
-            background-color: #9c9192;    /* color of the scroll thumb */
+            background-color: var(--f-scroll-color);    /* color of the scroll thumb */
             border-radius: 20px;       /* roundness of the scroll thumb */
-            border: 3px solid var(--f-scroll-color);  /* creates padding around scroll thumb */
+            border: 3px solid var(--f-separator-color);  /* creates padding around scroll thumb */
         }
     }
 }
